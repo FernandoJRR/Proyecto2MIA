@@ -1,7 +1,12 @@
 <template>
   <div>
     <h2 style="margin-left: 25%; margin-bottom: 1%">Login</h2>
-    <v-form style="width: 50%; margin-left: 25%" @submit.prevent>
+    <v-form
+      style="width: 50%; margin-left: 25%"
+      @submit.prevent="submit"
+      validate-on="submit"
+      ref="loginForm"
+    >
       <v-text-field
         label="Username"
         variant="outlined"
@@ -19,7 +24,7 @@
         :rules="passwordRules"
       ></v-text-field>
 
-      <v-btn>Login</v-btn>
+      <v-btn style="margin-top: 1%" type="submit">Login</v-btn>
     </v-form>
     <v-divider
       width="1200"
@@ -34,43 +39,48 @@
         Registrate
       </nuxt-link>
     </h4>
+    <Toast ref="vtoast" />
   </div>
 </template>
 <script>
 export default {
-  data() {
-    return {
-      show: false,
+  data: (vm) => ({
+    show: false,
 
-      username: "",
-      usernameRules: [
-        (value) => !!value || "Username requerido!",
-        (value) => vm.checkUsername(value),
-      ],
-      password: "",
-      passwordRules: [(value) => !!value || "Password requerido!"],
-    };
-  },
+    username: "",
+    usernameRules: [
+      (value) => !!value || "Username requerido!",
+      (value) => vm.checkUsername(value),
+    ],
+    password: "",
+    passwordRules: [
+      (value) => !!value || "Password requerido!",
+      (value) => vm.checkCredenciales(vm.username, value),
+    ],
+  }),
   methods: {
     async submit(event) {
       const results = await event;
       if (results.errors.length === 0) {
-        let response = await $fetch("http://localhost:3000/api/usuarios", {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          method: "POST",
-          body: {
-            tipo: "Usuario",
-            username: this.username,
-            password: this.password,
-          },
-        });
+        //TODO SESSION STORAGE, PUSH
+        let response = await $fetch(
+          "http://localhost:3100/api/usuarios/"+this.username
+        );
+        if (response.error) {
+          this.$refs.vtoast.show(
+            {message: response.error, color: 'failure'}
+          )
+        } else {
+          const { session, update } = await useSession()
+          await update({user: response.username, tipo: response.tipo})
+          const router = useRouter()
+          router.push('/');
+        }
       }
     },
     async checkUsername(username) {
       let response = await $fetch(
-        "http://localhost:3000/api/usuarios/verificarLogin",
+        "http://localhost:3100/api/usuarios/verificarUsernameLogin",
         {
           headers: {
             "Content-Type": "application/json",
@@ -78,6 +88,27 @@ export default {
           method: "POST",
           body: {
             username: this.username,
+          },
+        }
+      );
+      return new Promise((resolve) => {
+        if (response.error) {
+          return resolve(response.error);
+        }
+        return resolve(true);
+      });
+    },
+    async checkCredenciales(username, password) {
+      let response = await $fetch(
+        "http://localhost:3100/api/usuarios/verificarLogin",
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          method: "POST",
+          body: {
+            username: this.username,
+            password: this.password,
           },
         }
       );

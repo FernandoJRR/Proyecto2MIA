@@ -1,0 +1,62 @@
+[
+  {
+    "nombre": "Camisa de algodón",
+    "precio": 25.99,
+    "descripcion": "Camisa de manga larga con botones y bolsillo en el pecho. Hecha de algodón suave y cómodo.",
+    "urlImagen": "assets/server/camisa-algodon.jpg"
+  },
+  {
+    "nombre": "Vaqueros ajustados",
+    "precio": 39.99,
+    "descripcion": "Vaqueros de corte ajustado con cinco bolsillos y cierre de cremallera. Disponibles en varios colores.",
+    "urlImagen": "assets/server/vaqueros-ajustados.jpg"
+  },
+  {
+    "nombre": "Abrigo de lana",
+    "precio": 79.99,
+    "descripcion": "Abrigo de lana de corte clásico con botones y bolsillos laterales. Perfecto para el frío invierno.",
+    "urlImagen": "assets/server/abrigo-lana.jpg"
+  },
+  {
+    "nombre": "Zapatillas deportivas",
+    "precio": 59.99,
+    "descripcion": "Zapatillas deportivas cómodas y ligeras con suela antideslizante. Disponibles en varios colores.",
+    "urlImagen": "assets/server/zapatillas-deportivas.jpg"
+  },
+  {
+    "nombre": "Jersey de punto",
+    "precio": 34.99,
+    "descripcion": "Jersey de punto suave y cálido con cuello redondo y manga larga. Disponible en varios colores.",
+    "urlImagen": "https://example.com/images/jersey-punto.jpg"
+  },
+  {
+    "nombre": "Pantalones chinos",
+    "precio": 29.99,
+    "descripcion": "Pantalones chinos de corte recto con bolsillos laterales y traseros. Disponibles en varios colores.",
+    "urlImagen": "assets/server/pantalones-chinos.jpg"
+  },
+  {
+    "nombre": "Vestido de verano",
+    "precio": 49.99,
+    "descripcion": "Vestido de verano ligero y fresco con estampado floral y tirantes ajustables. Perfecto para la playa.",
+    "urlImagen": "https://example.com/images/vestido-verano.jpg"
+  },
+  {
+    "nombre": "Botas de cuero",
+    "precio": 89.99,
+    "descripcion": "Botas de cuero de alta calidad con suela antideslizante y cierre de cremallera lateral. Disponibles en varios colores.",
+    "urlImagen": "https://example.com/images/botas-cuero.jpg"
+  },
+  {
+    "nombre": "Cazadora bomber",
+    "precio": 69.99,
+    "descripcion": "Cazadora bomber de tela ligera y resistente con cierre de cremallera y bolsillos laterales. Disponible en varios colores.",
+    "urlImagen": "https://example.com/images/cazadora-bomber.jpg"
+  },
+  {
+    "nombre": "Polo de algodón",
+    "precio": 19.99,
+    "descripcion": "Polo de algodón de manga corta",
+    "urlImagen": "https://example.com/images/polo-algodon.jpg"
+  }
+]

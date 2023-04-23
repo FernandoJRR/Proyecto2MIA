@@ -4,7 +4,7 @@
     <v-btn @click="toLogin" v-if="login">
       Login
     </v-btn>
-    <v-btn v-else>
+    <v-btn @click="logout" v-else>
       Logout
     </v-btn>
   </v-app-bar>
@@ -20,10 +20,17 @@
       toLogin() {
         const router = useRouter()
         router.push("/login");
+      },
+      async logout() {
+        sessionStorage.clear()
+        const {session, remove} = await useSession()
+        await remove()
+        window.location.reload(true)
       }
     },
-    mounted() {
-      if (localStorage.getItem("user") == null) {
+    async mounted() {
+      const {session} = await useSession()
+      if (session.value.user == null) {
         this.login = true
       } else {
         this.login = false

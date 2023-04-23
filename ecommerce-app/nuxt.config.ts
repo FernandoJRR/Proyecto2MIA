@@ -12,7 +12,5 @@ export default defineNuxtConfig({
       'process.env.DEBUG': false,
     },
   },
-  nitro: {
-    plugins: ['~/server/index.ts']
-  }
+  modules: ['@sidebase/nuxt-session']
 })

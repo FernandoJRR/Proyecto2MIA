@@ -36,6 +36,7 @@
         Inicia Sesion
       </nuxt-link>
     </h4>
+    <Toast ref="vtoast" />
   </div>
 </template>
 <script>
@@ -66,6 +67,11 @@ export default {
             password: this.password,
           },
         });
+        if (response.ok) {
+          this.$refs.vtoast.show({ message: response.ok });
+        } else {
+          this.$refs.vtoast.show({ message: response.error, color: "failure" });
+        }
       }
     },
     async checkUsername(username) {
