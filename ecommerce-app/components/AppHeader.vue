@@ -1,40 +1,52 @@
 <template>
   <v-app-bar>
-    <v-app-bar-title>eCommerceGT</v-app-bar-title>
-    <v-btn @click="toLogin" v-if="login">
-      Login
-    </v-btn>
-    <v-btn @click="logout" v-else>
-      Logout
-    </v-btn>
+    <v-app-bar-title>
+      <nuxt-link to="/" style="text-decoration: none; color: black"> eCommerceGT </nuxt-link>
+      <v-btn to="/productos"> Productos </v-btn>
+    </v-app-bar-title>
+    <v-btn @click="toLogin" v-if="login"> Login </v-btn>
+    <div v-else>
+      <v-btn prepend-icon="mdi-cart-outline" v-if="tipo === 'Usuario'">
+        Carrito
+      </v-btn>
+      <v-btn prepend-icon="mdi-account" disabled>
+        <h5>{{ user }}</h5>
+      </v-btn>
+      <v-btn @click="logout"> Logout </v-btn>
+    </div>
   </v-app-bar>
 </template>
 <script>
-  export default {
-    data() {
-      return {
-        login: true
-      }
+export default {
+  data() {
+    return {
+      login: true,
+      user: "",
+      tipo: "",
+    };
+  },
+  methods: {
+    toLogin() {
+      const router = useRouter();
+      router.push("/login");
     },
-    methods: {
-      toLogin() {
-        const router = useRouter()
-        router.push("/login");
-      },
-      async logout() {
-        sessionStorage.clear()
-        const {session, remove} = await useSession()
-        await remove()
-        window.location.reload(true)
-      }
+    async logout() {
+      //cierre de sesion
+      const session = useCookie("session");
+      session.value = null;
+
+      window.location.reload(true);
     },
-    async mounted() {
-      const {session} = await useSession()
-      if (session.value.user == null) {
-        this.login = true
-      } else {
-        this.login = false
-      }
-    },
-  }
+  },
+  async beforeMount() {
+    const session = useCookie("session");
+    if (session.value == null) {
+      this.login = true;
+    } else {
+      this.login = false;
+      this.user = session.value.username;
+      this.tipo = session.value.tipo;
+    }
+  },
+};
 </script>

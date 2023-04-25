@@ -56,7 +56,7 @@ export default {
     async submit(event) {
       const results = await event;
       if (results.errors.length === 0) {
-        let response = await $fetch("http://localhost:3000/api/usuarios", {
+        let response = await $fetch("http://localhost:3100/api/usuarios", {
           headers: {
             "Content-Type": "application/json",
           },
@@ -70,13 +70,13 @@ export default {
         if (response.ok) {
           this.$refs.vtoast.show({ message: response.ok });
         } else {
-          this.$refs.vtoast.show({ message: response.error, color: "failure" });
+          this.$refs.vtoast.show({ message: response.error, color: 'error' });
         }
       }
     },
     async checkUsername(username) {
       let response = await $fetch(
-        "http://localhost:3000/api/usuarios/verificarRegistro",
+        "http://localhost:3100/api/usuarios/verificarRegistro",
         {
           headers: {
             "Content-Type": "application/json",

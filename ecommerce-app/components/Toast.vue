@@ -6,7 +6,7 @@
       bottom
       right
   >
-    <v-icon left>{{icon}}</v-icon>{{message}}
+    <v-icon left>{{icon}}</v-icon> {{message}}
   </v-snackbar>
 </template>
 

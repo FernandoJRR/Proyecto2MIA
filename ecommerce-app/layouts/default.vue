@@ -1,6 +1,8 @@
 <template>
   <v-app>
     <AppHeader/>
-    <slot/>
+    <div style="margin-top:5%">
+      <slot/>
+    </div>
   </v-app>
 </template>

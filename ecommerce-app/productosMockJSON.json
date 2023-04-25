@@ -1,62 +1,154 @@
 [
   {
+    "objectID": "0540385490",
     "nombre": "Camisa de algodón",
     "precio": 25.99,
     "descripcion": "Camisa de manga larga con botones y bolsillo en el pecho. Hecha de algodón suave y cómodo.",
-    "urlImagen": "assets/server/camisa-algodon.jpg"
+    "categoria": "Otros",
+    "urlImagen": "camisa-algodon.jpg"
   },
   {
+    "objectID": "7584972047",
     "nombre": "Vaqueros ajustados",
     "precio": 39.99,
     "descripcion": "Vaqueros de corte ajustado con cinco bolsillos y cierre de cremallera. Disponibles en varios colores.",
-    "urlImagen": "assets/server/vaqueros-ajustados.jpg"
+    "categoria": "Otros",
+    "urlImagen": "vaqueros-ajustados.jpg"
   },
   {
+    "objectID": "i540385043",
     "nombre": "Abrigo de lana",
     "precio": 79.99,
     "descripcion": "Abrigo de lana de corte clásico con botones y bolsillos laterales. Perfecto para el frío invierno.",
-    "urlImagen": "assets/server/abrigo-lana.jpg"
+    "categoria": "Otros",
+    "urlImagen": "abrigo-lana.jpg"
   },
   {
+    "objectID": "7860580047",
     "nombre": "Zapatillas deportivas",
     "precio": 59.99,
     "descripcion": "Zapatillas deportivas cómodas y ligeras con suela antideslizante. Disponibles en varios colores.",
-    "urlImagen": "assets/server/zapatillas-deportivas.jpg"
+    "categoria": "Otros",
+    "urlImagen": "zapatillas-deportivas.jpg"
   },
   {
+    "objectID": "4654664247",
     "nombre": "Jersey de punto",
     "precio": 34.99,
     "descripcion": "Jersey de punto suave y cálido con cuello redondo y manga larga. Disponible en varios colores.",
-    "urlImagen": "https://example.com/images/jersey-punto.jpg"
+    "categoria": "Otros",
+    "urlImagen": "jersey-punto.jpg"
   },
   {
+    "objectID": "8768767654",
     "nombre": "Pantalones chinos",
     "precio": 29.99,
     "descripcion": "Pantalones chinos de corte recto con bolsillos laterales y traseros. Disponibles en varios colores.",
-    "urlImagen": "assets/server/pantalones-chinos.jpg"
+    "categoria": "Otros",
+    "urlImagen": "pantalones-chinos.jpg"
   },
   {
+    "objectID": "4324324247",
     "nombre": "Vestido de verano",
     "precio": 49.99,
     "descripcion": "Vestido de verano ligero y fresco con estampado floral y tirantes ajustables. Perfecto para la playa.",
-    "urlImagen": "https://example.com/images/vestido-verano.jpg"
+    "categoria": "Otros",
+    "urlImagen": "vestido-verano.jpg"
   },
   {
+    "objectID": "7587324047",
     "nombre": "Botas de cuero",
     "precio": 89.99,
     "descripcion": "Botas de cuero de alta calidad con suela antideslizante y cierre de cremallera lateral. Disponibles en varios colores.",
-    "urlImagen": "https://example.com/images/botas-cuero.jpg"
+    "categoria": "Otros",
+    "urlImagen": "botas-cuero.jpg"
   },
   {
+    "objectID": "1098084247",
     "nombre": "Cazadora bomber",
     "precio": 69.99,
     "descripcion": "Cazadora bomber de tela ligera y resistente con cierre de cremallera y bolsillos laterales. Disponible en varios colores.",
-    "urlImagen": "https://example.com/images/cazadora-bomber.jpg"
+    "categoria": "Otros",
+    "urlImagen": "cazadora-bomber.jpg"
   },
   {
+    "objectID": "4958948067",
     "nombre": "Polo de algodón",
     "precio": 19.99,
     "descripcion": "Polo de algodón de manga corta",
-    "urlImagen": "https://example.com/images/polo-algodon.jpg"
+    "categoria": "Otros",
+    "urlImagen": "polo-algodon.jpg"
+  },
+  {
+    "objectID": "5958309845",
+    "nombre": "Aspiradora de mano",
+    "precio": 49.99,
+    "descripcion": "Aspiradora de mano portátil con batería recargable y filtro HEPA. Ideal para limpiar pequeñas superficies y rincones difíciles de alcanzar.",
+    "categoria": "Hogar",
+    "urlImagen": "https://example.com/images/aspiradora-de-mano.jpg"
+  },
+  {
+    "objectID": "0970232047",
+    "nombre": "Smartwatch",
+    "precio": 129.99,
+    "descripcion": "Smartwatch con pantalla táctil a color, medición de ritmo cardíaco, contador de pasos y notificaciones de llamadas y mensajes.",
+    "categoria": "Tecnologia",
+    "urlImagen": "https://example.com/images/smartwatch.jpg"
+  },
+  {
+    "objectID": "2314325434",
+    "nombre": "Auriculares inalámbricos",
+    "precio": 79.99,
+    "descripcion": "Auriculares inalámbricos con cancelación de ruido, micrófono integrado y estuche de carga. Hasta 6 horas de autonomía.",
+    "categoria": "Tecnologia",
+    "urlImagen": "https://example.com/images/auriculares-inalambricos.jpg"
+  },
+  {
+    "objectID": "5948305840",
+    "nombre": "Altavoz Bluetooth",
+    "precio": 59.99,
+    "descripcion": "Altavoz portátil con conexión Bluetooth, resistente al agua y con una autonomía de hasta 10 horas. Perfecto para llevar de viaje.",
+    "categoria": "Tecnologia",
+    "urlImagen": "https://example.com/images/altavoz-bluetooth.jpg"
+  },
+  {
+    "objectID": "4534684647",
+    "nombre": "Cámara de seguridad",
+    "precio": 89.99,
+    "descripcion": "Cámara de seguridad para interiores con detección de movimiento, visión nocturna y grabación en HD. Se puede controlar desde una aplicación móvil.",
+    "categoria": "Hogar",
+    "urlImagen": "https://example.com/images/camara-seguridad.jpg"
+  },
+  {
+    "objectID": "8764654437",
+    "nombre": "Teclado mecánico",
+    "precio": 109.99,
+    "descripcion": "Teclado mecánico para gaming con iluminación RGB, interruptores Cherry MX y anti-ghosting para evitar fallos de pulsación.",
+    "categoria": "Tecnologia",
+    "urlImagen": "https://example.com/images/teclado-mecanico.jpg"
+  },
+  {
+    "objectID": "3218613127",
+    "nombre": "Impresora láser",
+    "precio": 179.99,
+    "descripcion": "Impresora láser monocromática con impresión a doble cara automática y conexión Wi-Fi. Perfecta para uso doméstico o en pequeñas empresas.",
+    "categoria": "Tecnologia",
+    "urlImagen": "https://example.com/images/impresora-laser.jpg"
+  },
+  {
+    "objectID": "1231843157",
+    "nombre": "Lámpara",
+    "precio": 39.99,
+    "descripcion": "Lámpara con control por voz mediante Alexa o Google Assistant, cambio de color y programación de horarios.",
+    "categoria": "Hogar",
+    "urlImagen": "https://example.com/images/lampara.jpg"
+  },
+  {
+    "objectID": "2139816547",
+    "nombre": "Tablet",
+    "precio": 249.99,
+    "descripcion": "Tablet con pantalla de alta resolución, procesador de ocho núcleos y 64 GB de almacenamiento interno. Ideal para trabajar o para entretenimiento.",
+    "categoria": "Tecnologia",
+    "urlImagen": "https://example.com/images/tablet.jpg"
   }
 ]

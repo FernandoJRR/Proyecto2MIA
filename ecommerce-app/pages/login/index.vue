@@ -64,17 +64,17 @@ export default {
       if (results.errors.length === 0) {
         //TODO SESSION STORAGE, PUSH
         let response = await $fetch(
-          "http://localhost:3100/api/usuarios/"+this.username
+          "http://localhost:3100/api/usuarios/" + this.username
         );
         if (response.error) {
-          this.$refs.vtoast.show(
-            {message: response.error, color: 'failure'}
-          )
+          this.$refs.vtoast.show({ message: response.error, color: 'error' });
         } else {
-          const { session, update } = await useSession()
-          await update({user: response.username, tipo: response.tipo})
-          const router = useRouter()
-          router.push('/');
+          //Inicio de sesionl
+          const session = useCookie("session");
+          session.value = { username: response.username, tipo: response.tipo };
+
+          const router = useRouter();
+          router.back();
         }
       }
     },
