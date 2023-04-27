@@ -71,7 +71,7 @@ export default {
         } else {
           //Inicio de sesionl
           const session = useCookie("session");
-          session.value = { username: response.username, tipo: response.tipo };
+          session.value = { username: response.username, tipo: response.tipo, carrito: [] };
 
           const router = useRouter();
           router.back();

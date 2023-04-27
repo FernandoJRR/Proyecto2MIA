@@ -29,24 +29,24 @@ router.post("/", async (req, res) => {
 });
 
 router.post("/verificarUsernameLogin", async (req, res) => {
-  const body = req.body
+  const body = req.body;
   const usuario = await Usuario.findOne({ username: body.username });
   if (usuario == null) {
-    res.json({error: "Username no existe"})
-    return
+    res.json({ error: "Username no existe" });
+    return;
   }
-  res.json({ok: "Credenciales validas"})
-})
+  res.json({ ok: "Credenciales validas" });
+});
 
 router.post("/verificarRegistro", async (req, res) => {
-  const body = req.body
+  const body = req.body;
   const usuario = await Usuario.findOne({ username: body.username });
   if (usuario == null) {
-    res.json({ok: "Username no existe"})
-    return
+    res.json({ ok: "Username no existe" });
+    return;
   }
-  res.json({error: "Username existe"})
-})
+  res.json({ error: "Username existe" });
+});
 
 router.post("/verificarLogin", async (req, res) => {
   const body = req.body;
@@ -66,13 +66,42 @@ router.post("/verificarLogin", async (req, res) => {
 });
 
 router.get("/:username", async (req, res) => {
-  const username = req.params.username
+  const username = req.params.username;
   const usuario = await Usuario.findOne({ username: username });
   if (usuario == null) {
-    res.json({error: "Usuario no existe"})
-    return
+    res.json({ error: "Usuario no existe" });
+    return;
   }
-  res.json(usuario)
-})
+  res.json(usuario);
+});
+
+router.patch("/:username", async (req, res) => {
+  const username = req.params.username;
+  const body = req.body;
+  const usuario = await Usuario.findOne({ username: username });
+  if (usuario == null) {
+    res.json({ error: "Usuario no existe" });
+    return;
+  } else {
+    try {
+      const update = await Usuario.updateOne(
+        { username: username },
+        {
+          $set: { username: body.username, tipo: body.tipo },
+        }
+      );
+      if (update.modifiedCount === 0) {
+        res.json({ ok: "No se ha modificado al usuario" });
+        return;
+      } else {
+        res.json({ ok: "Usuario modificado exitosamente" });
+        return;
+      }
+    } catch (error) {
+      res.json({ error: err });
+      return;
+    }
+  }
+});
 
 module.exports = router;

@@ -1,9 +1,28 @@
 export default defineNuxtRouteMiddleware((to, from) => {
-  const usuario = useCookie('session_user')
-  const tipo = useCookie('session_tipo')
+  const session = useCookie('session')
   if (to.path === "/carrito") {
-    if (usuario.value !== undefined) {
-      if (tipo.value === "Usuario") {
+    if (session.value !== undefined) {
+      if ((session.value as any).tipo === "Usuario") {
+      } else {
+        return navigateTo('/');
+      }
+    } else {
+      return navigateTo('/');
+    }
+  }
+  if (to.path === "/usuarios") {
+    if (session.value !== undefined) {
+      if ((session.value as any).tipo === "Administrador") {
+      } else {
+        return navigateTo('/');
+      }
+    } else {
+      return navigateTo('/');
+    }
+  }
+  if (to.path === "/paquetes") {
+    if (session.value !== undefined) {
+      if ((session.value as any).tipo === "Paqueteria") {
       } else {
         return navigateTo('/');
       }

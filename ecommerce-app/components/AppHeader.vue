@@ -6,8 +6,14 @@
     </v-app-bar-title>
     <v-btn @click="toLogin" v-if="login"> Login </v-btn>
     <div v-else>
-      <v-btn prepend-icon="mdi-cart-outline" v-if="tipo === 'Usuario'">
+      <v-btn prepend-icon="mdi-cart-outline" v-if="tipo === 'Usuario'" to="/carrito">
         Carrito
+      </v-btn>
+      <v-btn prepend-icon="mdi-account-group" v-else-if="tipo === 'Administrador'" to="/usuarios">
+        Usuarios
+      </v-btn>
+      <v-btn prepend-icon="mdi-cart-outline" v-else-if="tipo === 'Paqueteria'" to="/paquetes">
+        Paquetes
       </v-btn>
       <v-btn prepend-icon="mdi-account" disabled>
         <h5>{{ user }}</h5>

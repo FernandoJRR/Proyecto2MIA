@@ -15,9 +15,43 @@
         <h3>Sobre este producto</h3>
         <h4>{{ productoActual.descripcion }}</h4>
         <br />
-        <v-btn color="primary" append-icon="mdi-cart" @click="onAgregar" block>
-          Agregar al Carrito
-        </v-btn>
+        <div
+          v-if="
+            useCookie('session').value === undefined ||
+            useCookie('session').value.tipo === 'Usuario'
+          "
+        >
+          <v-btn
+            v-show="!productoCarrito"
+            color="primary"
+            append-icon="mdi-cart"
+            @click="onAgregar"
+            block
+          >
+            Agregar al Carrito
+          </v-btn>
+          <v-btn
+            v-show="productoCarrito"
+            color="secondary"
+            append-icon="mdi-close"
+            @click="onEliminar"
+            block
+          >
+            Eliminar del Carrito
+          </v-btn>
+        </div>
+        <div v-else>
+          <v-btn
+            v-show="!productoCarrito"
+            color="primary"
+            append-icon="mdi-cart"
+            @click="onAgregar"
+            block
+            disabled
+          >
+            Agregar al Carrito
+          </v-btn>
+        </div>
       </v-col>
     </v-row>
   </v-container>
@@ -32,6 +66,7 @@ export default {
     return {
       productoActual: null,
       productosVentas: productos,
+      productoCarrito: false,
     };
   },
   methods: {
@@ -44,23 +79,40 @@ export default {
           icon: "mdi-alert-circle-outline",
         });
       } else {
+        const session = useCookie("session");
+        session.value.carrito.push(this.productoActual.objectID);
+
+        this.productoCarrito = true;
         this.$refs.vtoast.show({ message: "Producto agregado exitosamente!" });
+      }
+    },
+    onEliminar() {
+      const session = useCookie("session");
+      session.value.carrito = session.value.carrito.filter(
+        (item) => item !== this.productoActual.objectID
+      );
+      this.productoCarrito = false;
+      this.$refs.vtoast.show({ message: "Producto eliminado!" });
+    },
+    productoEnCarrito() {
+      const session = useCookie("session");
+      if (session.value !== undefined) {
+        const carrito = session.value.carrito;
+        return carrito.includes(this.productoActual.objectID);
       }
     },
   },
   mounted() {
-    console.log(productos);
     for (let index = 0; index < productos.length; index++) {
       const product = productos[index];
       const route = useRoute();
       const id = product.objectID;
-      console.log(product);
       if (id == route.params.productID) {
         this.productoActual = product;
         break;
       }
     }
-    console.log("este " + this.productoActual);
+    this.productoCarrito = this.productoEnCarrito();
   },
 };
 </script>

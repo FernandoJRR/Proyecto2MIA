@@ -68,6 +68,7 @@ export default {
           },
         });
         if (response.ok) {
+          this.$refs.registroForm.reset()
           this.$refs.vtoast.show({ message: response.ok });
         } else {
           this.$refs.vtoast.show({ message: response.error, color: 'error' });
