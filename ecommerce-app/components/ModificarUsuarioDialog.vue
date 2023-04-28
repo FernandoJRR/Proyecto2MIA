@@ -35,7 +35,7 @@
             Cancelar
           </v-btn>
           <v-btn color="blue-darken-1" variant="text" type="submit">
-            Agregar
+            Modificar
           </v-btn>
         </v-card-actions>
       </v-form>
@@ -63,7 +63,6 @@ export default {
     onCancelar() {
       this.$refs.agregarForm.reset();
       this.dialog = false;
-      $parent.mostrar();
     },
     async submit(event) {
       const results = await event;

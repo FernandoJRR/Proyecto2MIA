@@ -62,7 +62,6 @@ export default {
     async submit(event) {
       const results = await event;
       if (results.errors.length === 0) {
-        //TODO SESSION STORAGE, PUSH
         let response = await $fetch(
           "http://localhost:3100/api/usuarios/" + this.username
         );

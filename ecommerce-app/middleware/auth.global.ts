@@ -1,6 +1,6 @@
 export default defineNuxtRouteMiddleware((to, from) => {
   const session = useCookie('session')
-  if (to.path === "/carrito") {
+  if (to.path === "/carrito" || to.path === '/productos') {
     if (session.value !== undefined) {
       if ((session.value as any).tipo === "Usuario") {
       } else {

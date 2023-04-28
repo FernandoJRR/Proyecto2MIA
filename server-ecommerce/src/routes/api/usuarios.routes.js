@@ -98,7 +98,7 @@ router.patch("/:username", async (req, res) => {
         return;
       }
     } catch (error) {
-      res.json({ error: err });
+      res.json({ error: error });
       return;
     }
   }

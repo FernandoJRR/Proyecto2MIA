@@ -1,18 +1,32 @@
 <template>
   <v-app-bar>
     <v-app-bar-title>
-      <nuxt-link to="/" style="text-decoration: none; color: black"> eCommerceGT </nuxt-link>
-      <v-btn to="/productos"> Productos </v-btn>
+      <nuxt-link to="/" style="text-decoration: none; color: black">
+        eCommerceGT
+      </nuxt-link>
+      <v-btn to="/productos" v-if="tipo === 'Usuario'"> Productos </v-btn>
     </v-app-bar-title>
     <v-btn @click="toLogin" v-if="login"> Login </v-btn>
     <div v-else>
-      <v-btn prepend-icon="mdi-cart-outline" v-if="tipo === 'Usuario'" to="/carrito">
+      <v-btn
+        prepend-icon="mdi-cart-outline"
+        v-if="tipo === 'Usuario'"
+        to="/carrito"
+      >
         Carrito
       </v-btn>
-      <v-btn prepend-icon="mdi-account-group" v-else-if="tipo === 'Administrador'" to="/usuarios">
+      <v-btn
+        prepend-icon="mdi-account-group"
+        v-else-if="tipo === 'Administrador'"
+        to="/usuarios"
+      >
         Usuarios
       </v-btn>
-      <v-btn prepend-icon="mdi-cart-outline" v-else-if="tipo === 'Paqueteria'" to="/paquetes">
+      <v-btn
+        prepend-icon="mdi-cart-outline"
+        v-else-if="tipo === 'Paqueteria'"
+        to="/paquetes"
+      >
         Paquetes
       </v-btn>
       <v-btn prepend-icon="mdi-account" disabled>

@@ -12,14 +12,9 @@
     <h1 style="text-align: center">Ultimos Productos</h1>
     <br />
     <v-row>
-      <v-col
-        cols="12"
-        sm="3"
-        md="4"
-        v-for="producto in productosVentas"
-      >
+      <v-col cols="12" sm="3" md="4" v-for="producto in productosVentas">
         <ProductCard
-          :codigo="producto.objectID"
+          :codigo="producto._id"
           :nombre="producto.nombre"
           :price="producto.precio"
           :description="producto.descripcion"
@@ -31,17 +26,26 @@
   </v-container>
 </template>
 <script>
-import productos from "../productosMockJSON.json";
 export default {
   data() {
     return {
-      productosVentas: productos,
+      productosVentas: [],
     };
   },
   methods: {
-    onBuscar(){
-      alert("se busca")
-    }
+    onBuscar() {
+      alert("se busca");
+    },
+    async actualizarProductos() {
+      const response = await $fetch("http://localhost:3100/api/productos");
+      if (response.error) {
+      } else {
+        this.productosVentas = response;
+      }
+    },
+  },
+  async mounted() {
+    await this.actualizarProductos();
   },
 };
 </script>

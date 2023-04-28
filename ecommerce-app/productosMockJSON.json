@@ -6,7 +6,8 @@
     "descripcion": "Camisa de manga larga con botones y bolsillo en el pecho. Hecha de algodón suave y cómodo.",
     "categoria": "Otros",
     "vendedor": "anaciel",
-    "urlImagen": "camisa-algodon.jpg"
+    "urlImagen": "camisa-algodon.jpg",
+    "pedido": null
   },
   {
     "objectID": "7584972047",
@@ -15,7 +16,8 @@
     "descripcion": "Vaqueros de corte ajustado con cinco bolsillos y cierre de cremallera. Disponibles en varios colores.",
     "categoria": "Otros",
     "vendedor": "rantonio",
-    "urlImagen": "vaqueros-ajustados.jpg"
+    "urlImagen": "vaqueros-ajustados.jpg",
+    "pedido": null
   },
   {
     "objectID": "i540385043",
@@ -24,7 +26,8 @@
     "descripcion": "Abrigo de lana de corte clásico con botones y bolsillos laterales. Perfecto para el frío invierno.",
     "categoria": "Otros",
     "vendedor": "usuario01",
-    "urlImagen": "abrigo-lana.jpg"
+    "urlImagen": "abrigo-lana.jpg",
+    "pedido": null
   },
   {
     "objectID": "7860580047",
@@ -33,7 +36,8 @@
     "descripcion": "Zapatillas deportivas cómodas y ligeras con suela antideslizante. Disponibles en varios colores.",
     "categoria": "Otros",
     "vendedor": "fernanrod",
-    "urlImagen": "zapatillas-deportivas.jpg"
+    "urlImagen": "zapatillas-deportivas.jpg",
+    "pedido": null
   },
   {
     "objectID": "4654664247",
@@ -42,7 +46,8 @@
     "descripcion": "Jersey de punto suave y cálido con cuello redondo y manga larga. Disponible en varios colores.",
     "categoria": "Otros",
     "vendedor": "charlie",
-    "urlImagen": "jersey-punto.jpg"
+    "urlImagen": "jersey-punto.jpg",
+    "pedido": null
   },
   {
     "objectID": "8768767654",
@@ -51,7 +56,8 @@
     "descripcion": "Pantalones chinos de corte recto con bolsillos laterales y traseros. Disponibles en varios colores.",
     "categoria": "Otros",
     "vendedor": "charlie",
-    "urlImagen": "pantalones-chinos.jpg"
+    "urlImagen": "pantalones-chinos.jpg",
+    "pedido": null
   },
   {
     "objectID": "4324324247",
@@ -60,7 +66,8 @@
     "descripcion": "Vestido de verano ligero y fresco con estampado floral y tirantes ajustables. Perfecto para la playa.",
     "categoria": "Otros",
     "vendedor": "fernanrod",
-    "urlImagen": "vestido-verano.jpg"
+    "urlImagen": "vestido-verano.jpg",
+    "pedido": null
   },
   {
     "objectID": "7587324047",
@@ -69,7 +76,8 @@
     "descripcion": "Botas de cuero de alta calidad con suela antideslizante y cierre de cremallera lateral. Disponibles en varios colores.",
     "categoria": "Otros",
     "vendedor": "rantonio",
-    "urlImagen": "botas-cuero.jpg"
+    "urlImagen": "botas-cuero.jpg",
+    "pedido": null
   },
   {
     "objectID": "1098084247",
@@ -78,7 +86,8 @@
     "descripcion": "Cazadora bomber de tela ligera y resistente con cierre de cremallera y bolsillos laterales. Disponible en varios colores.",
     "categoria": "Otros",
     "vendedor": "usuario01",
-    "urlImagen": "cazadora-bomber.jpg"
+    "urlImagen": "cazadora-bomber.jpg",
+    "pedido": null
   },
   {
     "objectID": "4958948067",
@@ -87,7 +96,8 @@
     "descripcion": "Polo de algodón de manga corta",
     "categoria": "Otros",
     "vendedor": "anaciel",
-    "urlImagen": "polo-algodon.jpg"
+    "urlImagen": "polo-algodon.jpg",
+    "pedido": null
   },
   {
     "objectID": "5958309845",
@@ -96,7 +106,8 @@
     "descripcion": "Aspiradora de mano portátil con batería recargable y filtro HEPA. Ideal para limpiar pequeñas superficies y rincones difíciles de alcanzar.",
     "categoria": "Hogar",
     "vendedor": "anaciel",
-    "urlImagen": "aspiradora-de-mano.jpg"
+    "urlImagen": "aspiradora-de-mano.jpg",
+    "pedido": null
   },
   {
     "objectID": "0970232047",
@@ -105,7 +116,8 @@
     "descripcion": "Smartwatch con pantalla táctil a color, medición de ritmo cardíaco, contador de pasos y notificaciones de llamadas y mensajes.",
     "categoria": "Tecnologia",
     "vendedor": "rantonio",
-    "urlImagen": "smartwatch.jpg"
+    "urlImagen": "smartwatch.jpg",
+    "pedido": null
   },
   {
     "objectID": "2314325434",
@@ -114,7 +126,8 @@
     "descripcion": "Auriculares inalámbricos con cancelación de ruido, micrófono integrado y estuche de carga. Hasta 6 horas de autonomía.",
     "categoria": "Tecnologia",
     "vendedor": "fernanrod",
-    "urlImagen": "auriculares-inalambricos.jpg"
+    "urlImagen": "auriculares-inalambricos.jpg",
+    "pedido": null
   },
   {
     "objectID": "5948305840",
@@ -123,15 +136,18 @@
     "descripcion": "Altavoz portátil con conexión Bluetooth, resistente al agua y con una autonomía de hasta 10 horas. Perfecto para llevar de viaje.",
     "categoria": "Tecnologia",
     "vendedor": "charlie",
-    "urlImagen": "altavoz-bluetooth.jpg"
+    "urlImagen": "altavoz-bluetooth.jpg",
+    "pedido": null
   },
   {
     "objectID": "4534684647",
     "nombre": "Cámara de seguridad",
     "precio": 89.99,
     "descripcion": "Cámara de seguridad para interiores con detección de movimiento, visión nocturna y grabación en HD. Se puede controlar desde una aplicación móvil.",
-    "categoria": "usuario01",
-    "urlImagen": "camara-seguridad.jpg"
+    "categoria": "Tecnologia",
+    "vendedor": "fernanrod",
+    "urlImagen": "camara-seguridad.jpg",
+    "pedido": null
   },
   {
     "objectID": "8764654437",
@@ -140,7 +156,8 @@
     "descripcion": "Teclado mecánico para gaming con iluminación RGB, interruptores Cherry MX y anti-ghosting para evitar fallos de pulsación.",
     "categoria": "Tecnologia",
     "vendedor": "rantonio",
-    "urlImagen": "teclado-mecanico.jpg"
+    "urlImagen": "teclado-mecanico.jpg",
+    "pedido": null
   },
   {
     "objectID": "3218613127",
@@ -149,7 +166,8 @@
     "descripcion": "Impresora láser monocromática con impresión a doble cara automática y conexión Wi-Fi. Perfecta para uso doméstico o en pequeñas empresas.",
     "categoria": "Tecnologia",
     "vendedor": "anaciel",
-    "urlImagen": "impresora-laser.jpg"
+    "urlImagen": "impresora-laser.jpg",
+    "pedido": null
   },
   {
     "objectID": "1231843157",
@@ -158,7 +176,8 @@
     "descripcion": "Lámpara con control por voz mediante Alexa o Google Assistant, cambio de color y programación de horarios.",
     "categoria": "Hogar",
     "vendedor": "charlie",
-    "urlImagen": "lampara.jpg"
+    "urlImagen": "lampara.jpg",
+    "pedido": null
   },
   {
     "objectID": "2139816547",
@@ -167,7 +186,8 @@
     "descripcion": "Tablet con pantalla de alta resolución, procesador de ocho núcleos y 64 GB de almacenamiento interno. Ideal para trabajar o para entretenimiento.",
     "categoria": "Tecnologia",
     "vendedor": "fernanrod",
-    "urlImagen": "tablet.jpg"
+    "urlImagen": "tablet.jpg",
+    "pedido": null
   },
   {
     "objectID": "4382498347",
@@ -176,275 +196,307 @@
     "descripcion": "Termo con medidor de temperatura bluetooth y calentador automatico.",
     "categoria": "Tecnologia",
     "vendedor": "usuario01",
-    "urlImagen": "termo-inteligente.jpg"
+    "urlImagen": "termo-inteligente.jpg",
+    "pedido": null
   },
   {
     "objectID": "5934820007",
-      "nombre": "Juego de sartenes antiadherentes",
-      "precio": 59.99,
-      "descripcion": "Set de 3 sartenes antiadherentes de diferentes tamaños con mango ergonómico y base de inducción. Perfectas para cocinar cualquier tipo de alimento.",
-      "categoria": "Hogar",
-      "vendedor": "fernanrod",
-      "urlImagen": "sartenes-antiadherentes.jpg"
-    },
-    {
+    "nombre": "Juego de sartenes antiadherentes",
+    "precio": 59.99,
+    "descripcion": "Set de 3 sartenes antiadherentes de diferentes tamaños con mango ergonómico y base de inducción. Perfectas para cocinar cualquier tipo de alimento.",
+    "categoria": "Hogar",
+    "vendedor": "fernanrod",
+    "urlImagen": "sartenes-antiadherentes.jpg",
+    "pedido": null
+  },
+  {
     "objectID": "0864035747",
-      "nombre": "Set de tazas de té",
-      "precio": 29.99,
-      "descripcion": "Set de 4 tazas de té de porcelana fina con dibujos de flores y detalles dorados. Incluye platillos y cucharillas a juego.",
-      "categoria": "Hogar",
-      "vendedor": "rantonio",
-      "urlImagen": "set-tazas-te.jpg"
-    },
-    {
+    "nombre": "Set de tazas de té",
+    "precio": 29.99,
+    "descripcion": "Set de 4 tazas de té de porcelana fina con dibujos de flores y detalles dorados. Incluye platillos y cucharillas a juego.",
+    "categoria": "Hogar",
+    "vendedor": "rantonio",
+    "urlImagen": "set-tazas-te.jpg",
+    "pedido": null
+  },
+  {
     "objectID": "4684642207",
-      "nombre": "Juego de toallas de baño",
-      "precio": 49.99,
-      "descripcion": "Set de 6 toallas de baño de algodón egipcio suave y absorbente en colores neutros. Incluye 2 toallas de baño, 2 toallas de mano y 2 paños de lavado.",
-      "categoria": "Hogar",
-      "vendedor": "usuario01",
-      "urlImagen": "toallas-bano.jpg"
-    },
-    {
+    "nombre": "Juego de toallas de baño",
+    "precio": 49.99,
+    "descripcion": "Set de 6 toallas de baño de algodón egipcio suave y absorbente en colores neutros. Incluye 2 toallas de baño, 2 toallas de mano y 2 paños de lavado.",
+    "categoria": "Hogar",
+    "vendedor": "usuario01",
+    "urlImagen": "toallas-bano.jpg",
+    "pedido": null
+  },
+  {
     "objectID": "7904301277",
-      "nombre": "Juego de maletas",
-      "precio": 199.99,
-      "descripcion": "Set de 3 maletas con ruedas y asa retráctil en tamaños de cabina, mediano y grande. Fabricadas en poliéster resistente y con cierre de cremallera.",
-      "categoria": "Otros",
-      "vendedor": "anaciel",
-      "urlImagen": "maletas.jpg"
-    },
-    {
+    "nombre": "Juego de maletas",
+    "precio": 199.99,
+    "descripcion": "Set de 3 maletas con ruedas y asa retráctil en tamaños de cabina, mediano y grande. Fabricadas en poliéster resistente y con cierre de cremallera.",
+    "categoria": "Otros",
+    "vendedor": "anaciel",
+    "urlImagen": "maletas.jpg",
+    "pedido": null
+  },
+  {
     "objectID": "1832041821",
-      "nombre": "Bicicleta de montaña",
-      "precio": 799.99,
-      "descripcion": "Bicicleta de montaña con cuadro de aluminio ligero, suspensión delantera y frenos de disco hidráulicos. Ideal para aventuras al aire libre.",
-      "categoria": "Otros",
-      "vendedor": "charlie",
-      "urlImagen": "bicicleta-montana.jpg"
-    },
-    {
+    "nombre": "Bicicleta de montaña",
+    "precio": 799.99,
+    "descripcion": "Bicicleta de montaña con cuadro de aluminio ligero, suspensión delantera y frenos de disco hidráulicos. Ideal para aventuras al aire libre.",
+    "categoria": "Otros",
+    "vendedor": "charlie",
+    "urlImagen": "bicicleta-montana.jpg",
+    "pedido": null
+  },
+  {
     "objectID": "1083983527",
-      "nombre": "Juego de ajedrez de mármol",
-      "precio": 149.99,
-      "descripcion": "Tablero de ajedrez de mármol con piezas de ajedrez hechas a mano. Un juego clásico y elegante para disfrutar con amigos y familiares.",
-      "categoria": "Otros",
-      "vendedor": "charlie",
-      "urlImagen": "juego-ajedrez.jpg"
-    },
-    {
+    "nombre": "Juego de ajedrez de mármol",
+    "precio": 149.99,
+    "descripcion": "Tablero de ajedrez de mármol con piezas de ajedrez hechas a mano. Un juego clásico y elegante para disfrutar con amigos y familiares.",
+    "categoria": "Otros",
+    "vendedor": "charlie",
+    "urlImagen": "juego-ajedrez.jpg",
+    "pedido": null
+  },
+  {
     "objectID": "9564132177",
-      "nombre": "Set de herramientas",
-      "precio": 99.99,
-      "descripcion": "Set de herramientas par trabajos varios.",
-      "categoria": "Otros",
-      "vendedor": "usuario01",
-      "urlImagen": "set-de-herramientas.jpg"
-    },
-    {    
+    "nombre": "Set de herramientas",
+    "precio": 99.99,
+    "descripcion": "Set de herramientas par trabajos varios.",
+    "categoria": "Otros",
+    "vendedor": "usuario01",
+    "urlImagen": "set-de-herramientas.jpg",
+    "pedido": null
+  },
+  {
     "objectID": "1112373527",
-      "nombre": "Set de jardinería",    
-      "precio": 29.99,    
-      "descripcion": "Set de herramientas de jardinería que incluye una pala, un rastrillo, tijeras de podar, guantes y una bolsa de almacenamiento. Perfecto para los amantes de las plantas y la jardinería.",    
-      "categoria": "Hogar",    
-      "vendedor": "rantonio",    
-      "urlImagen": "set-jardineria.jpg"  
-    },  
-    {    
+    "nombre": "Set de jardinería",
+    "precio": 29.99,
+    "descripcion": "Set de herramientas de jardinería que incluye una pala, un rastrillo, tijeras de podar, guantes y una bolsa de almacenamiento. Perfecto para los amantes de las plantas y la jardinería.",
+    "categoria": "Hogar",
+    "vendedor": "rantonio",
+    "urlImagen": "set-jardineria.jpg",
+    "pedido": null
+  },
+  {
     "objectID": "1232112321",
-      "nombre": "Cámara de acción",    
-      "precio": 149.99,    
-      "descripcion": "Cámara de acción resistente al agua y a los golpes, con grabación en alta definición y control remoto. Ideal para capturar aventuras extremas y deportes al aire libre.",    
-      "categoria": "Tecnologia",    
-      "vendedor": "fernanrod",    
-      "urlImagen": "camara-accion.jpg"  
-    },  
-    {    
+    "nombre": "Cámara de acción",
+    "precio": 149.99,
+    "descripcion": "Cámara de acción resistente al agua y a los golpes, con grabación en alta definición y control remoto. Ideal para capturar aventuras extremas y deportes al aire libre.",
+    "categoria": "Tecnologia",
+    "vendedor": "fernanrod",
+    "urlImagen": "camara-accion.jpg",
+    "pedido": null
+  },
+  {
     "objectID": "9798413107",
-      "nombre": "Set de libros de cocina",    
-      "precio": 49.99,    
-      "descripcion": "Set de 3 libros de cocina con recetas internacionales, técnicas culinarias y consejos para chefs aficionados. Incluye recetas vegetarianas y sin gluten.",    
-      "categoria": "Literatura",    
-      "vendedor": "anaciel",    
-      "urlImagen": "set-libros-cocina.jpg"  
-    },
-    {    
-      "objectID": "9404518328",    
-      "nombre": "AppleWatch",    
-      "precio": 199.99,    
-      "descripcion": "AppleWatch con pantalla táctil a color, GPS integrado, monitoreo de actividad física y notificaciones de mensajes y llamadas. Disponible en varios colores.",    
-      "categoria": "Tecnologia",    
-      "vendedor": "anaciel",    
-      "urlImagen": "applewatch.jpg"  
-    },  
-    {    
-      "objectID": "6598325048",    
-      "nombre": "Set de sábanas",    
-      "precio": 79.99,    
-      "descripcion": "Set de sábanas de algodón egipcio de alta calidad, suaves y transpirables. Incluye sábana ajustable, sábana plana y fundas de almohada. Disponible en varios tamaños y colores.",    
-      "categoria": "Hogar",    
-      "vendedor": "rantonio",    
-      "urlImagen": "set-sabanas.jpg"  
-    },  
-    {    
-      "objectID": "10318408505",    
-      "nombre": "Curso de programación",    
-      "precio": 149.99,    
-      "descripcion": "Curso en línea de programación en Python para principiantes, que abarca los fundamentos de la programación, la sintaxis de Python y la resolución de problemas. Incluye ejercicios prácticos y soporte técnico.",    
-      "categoria": "Academico",    
-      "vendedor": "usuario01",    
-      "urlImagen": "curso-programacion.jpg"  
-    },  {    
-    "objectID": "97613131567",    
-    "nombre": "Novela de ciencia ficción",    
-    "precio": 14.99,    
-    "descripcion": "Novela de ciencia ficción que explora temas como la inteligencia artificial, la vida extraterrestre y los viajes en el tiempo. Escrita por un autor best-seller y con excelentes reseñas.",    
-    "categoria": "Literatura",    
-    "vendedor": "charlie",    
-    "urlImagen": "novela-ciencia-ficcion.jpg"  
-    },  
-    {    
-      "objectID": "1231313287",    
-      "nombre": "Jarrón de cerámica",    
-      "precio": 49.99,    
-      "descripcion": "Jarrón de cerámica hecho a mano con un diseño elegante y minimalista. Ideal para flores naturales o artificiales. Disponible en varios colores y tamaños.",    
-      "categoria": "Decoracion",    
-      "vendedor": "fernanrod",    
-      "urlImagen": "jarron-ceramica.jpg"  
-    },
-    {    
-      "objectID": "12323138676",    
-      "nombre": "Auriculares WIFI",    
-      "precio": 59.99,    
-      "descripcion": "Auriculares inalámbricos con WIFI 5.0, micrófono integrado y cancelación de ruido. Diseño ergonómico y ligero. Disponible en varios colores.",    
-      "categoria": "Tecnologia",    
-      "vendedor": "fernanrod",    
-      "urlImagen": "auriculares-wifi.jpg"  
-    },  
-    {    
-      "objectID": "4613987923",    
-      "nombre": "Juego de toallas",    
-      "precio": 29.99,    
-      "descripcion": "Juego de toallas de algodón egipcio de alta calidad, suaves y absorbentes. Incluye toallas de baño, de mano y de tocador. Disponible en varios colores.",    
-      "categoria": "Hogar",    
-      "vendedor": "charlie",    
-      "urlImagen": "juego-toallas.jpg"  
-    },  
-    {    
-      "objectID": "34208054230",    
-      "nombre": "Agenda 2022",    
-      "precio": 12.99,    
-      "descripcion": "Agenda para el año 2022 con diseño moderno y funcional. Incluye calendario, planificador mensual y semanal, páginas de notas y stickers. Disponible en varios colores.",    
-      "categoria": "Academico",    
-      "vendedor": "usuario01",    
-      "urlImagen": "agenda-2022.jpg"  
-    },  
-    {    
-      "objectID": "9807784532",    
-      "nombre": "Libro de cocina",    
-      "precio": 24.99,    
-      "descripcion": "Libro de cocina con recetas saludables y fáciles de preparar, con fotografías a todo color. Escrito por un chef reconocido y con consejos útiles para la cocina diaria.",    
-      "categoria": "Literatura",    
-      "vendedor": "anaciel",    
-      "urlImagen": "libro-cocina.jpg"  
-    },  
-    {    
-      "objectID": "56897231987",    
-      "nombre": "Lámpara de mesa",    
-      "precio": 39.99,    
-      "descripcion": "Lámpara de mesa con base de madera y pantalla de tela. Diseño elegante y contemporáneo, con luz regulable. Disponible en varios colores.",    
-      "categoria": "Decoracion",    
-      "vendedor": "rantonio",    
-      "urlImagen": "lampara-mesa.jpg"  
-    },
-    {    
-      "objectID": "1725933938",    
-      "nombre": "Aspiradora de mano Patito",    
-      "precio": 39.99,    
-      "descripcion": "Aspiradora de mano Patito con potente succión y filtros lavables. Incluye accesorios para limpiar en lugares de difícil acceso. Ideal para limpiar el coche o en casa. Disponible en varios colores.",    
-      "categoria": "Hogar",    
-      "vendedor": "usuario01",    
-      "urlImagen": "aspiradora-de-mano-patito.jpg"  
-    },  
-    {    
-      "objectID": "829639174",    
-      "nombre": "Calculadora científica",    
-      "precio": 24.99,    
-      "descripcion": "Calculadora científica con funciones avanzadas como trigonometría, estadísticas y programación. Pantalla LCD de alta resolución y diseño ergonómico. Ideal para estudiantes y profesionales.",    
-      "categoria": "Academico",    
-      "vendedor": "charlie",    
-      "urlImagen": "calculadora-cientifica.jpg"  
-    },  
-    {    
-      "objectID": "395644313",    
-      "nombre": "Set de vasos de whisky",    
-      "precio": 29.99,    
-      "descripcion": "Set de 4 vasos de whisky de cristal de alta calidad con diseño clásico y elegante. Ideal para disfrutar de una copa de whisky en buena compañía.",    
-      "categoria": "Otros",    
-      "vendedor": "fernandrod",    
-      "urlImagen": "set-de-vasos-de-whisky.jpg"  
-    },  
-    {    
-      "objectID": "2817439789",    
-      "nombre": "Funda de almohada",    
-      "precio": 12.99,    
-      "descripcion": "Funda de almohada de algodón orgánico con diseño moderno y elegante. Suave al tacto y fácil de lavar. Disponible en varios tamaños.",    
-      "categoria": "Hogar",    
-      "vendedor": "rantonio",    
-      "urlImagen": "funda-de-almohada.jpg"  
-    },  
-    {    
-      "objectID": "2587891314",    
-      "nombre": "Altavoz portátil",    
-      "precio": 59.99,    
-      "descripcion": "Altavoz portátil con Bluetooth 5.0 y sonido de alta calidad. Diseño resistente al agua y al polvo, con batería de larga duración. Ideal para llevar a cualquier lugar.",    
-      "categoria": "Tecnologia",    
-      "vendedor": "anaciel",    
-      "urlImagen": "altavoz-portatil.jpg"  
-    },
-    {
-      "objectID": "784912623",
-      "nombre": "Smartwatch Hw12",
-      "precio": 800.99,
-      "descripcion": "Smartwatch compatible con Android y iOS, con funciones de monitor de frecuencia cardíaca, podómetro y notificaciones de mensajes y llamadas.",
-      "categoria": "Tecnologia",
-      "vendedor": "usuario01",
-      "urlImagen": "smartwatch_hw12.jpg"
-    },
-    {
-      "objectID": "26289748916",
-      "nombre": "Libro El Código Da Vinci",
-      "precio": 200.50,
-      "descripcion": "Novela de intriga y misterio del autor Dan Brown, protagonizada por el profesor Robert Langdon. Edición de bolsillo.",
-      "categoria": "Literatura",
-      "vendedor": "anaciel",
-      "urlImagen": "el_codigo_da_vinci.jpg"
-    },
-    {
-      "objectID": "159789326",
-      "nombre": "Silla de Oficina Ergonómica",
-      "precio": 1500.00,
-      "descripcion": "Silla de oficina con respaldo alto, ajuste de altura y reposabrazos acolchados. Diseñada para brindar una posición cómoda y saludable durante largas jornadas laborales.",
-      "categoria": "Hogar",
-      "vendedor": "rantonio",
-      "urlImagen": "silla_oficina_ergonomica.jpg"
-    },
-    {
-      "objectID": "15126267423",
-      "nombre": "Cuadro Decorativo Abstracto",
-      "precio": 600.00,
-      "descripcion": "Cuadro decorativo con diseño abstracto en tonos azules y blancos. Ideal para darle un toque moderno y sofisticado a cualquier ambiente.",
-      "categoria": "Decoracion",
-      "vendedor": "charlie",
-      "urlImagen": "cuadro_decorativo_abstracto.jpg"
-    },
-    {
-      "objectID": "4790324589",
-      "nombre": "Calculadora Científica Casio",
-      "precio": 350.00,
-      "descripcion": "Calculadora científica con pantalla de alta resolución, funciones trigonométricas y estadísticas, y memoria de 9 variables. Incluye estuche protector.",
-      "categoria": "Academico",
-      "vendedor": "fernanrod",
-      "urlImagen": "calculadora_casio.jpg"
-    }
+    "nombre": "Set de libros de cocina",
+    "precio": 49.99,
+    "descripcion": "Set de 3 libros de cocina con recetas internacionales, técnicas culinarias y consejos para chefs aficionados. Incluye recetas vegetarianas y sin gluten.",
+    "categoria": "Literatura",
+    "vendedor": "anaciel",
+    "urlImagen": "set-libros-cocina.jpg",
+    "pedido": null
+  },
+  {
+    "objectID": "9404518328",
+    "nombre": "AppleWatch",
+    "precio": 199.99,
+    "descripcion": "AppleWatch con pantalla táctil a color, GPS integrado, monitoreo de actividad física y notificaciones de mensajes y llamadas. Disponible en varios colores.",
+    "categoria": "Tecnologia",
+    "vendedor": "anaciel",
+    "urlImagen": "applewatch.jpg",
+    "pedido": null
+  },
+  {
+    "objectID": "6598325048",
+    "nombre": "Set de sábanas",
+    "precio": 79.99,
+    "descripcion": "Set de sábanas de algodón egipcio de alta calidad, suaves y transpirables. Incluye sábana ajustable, sábana plana y fundas de almohada. Disponible en varios tamaños y colores.",
+    "categoria": "Hogar",
+    "vendedor": "rantonio",
+    "urlImagen": "set-sabanas.jpg",
+    "pedido": null
+  },
+  {
+    "objectID": "10318408505",
+    "nombre": "Curso de programación",
+    "precio": 149.99,
+    "descripcion": "Curso en línea de programación en Python para principiantes, que abarca los fundamentos de la programación, la sintaxis de Python y la resolución de problemas. Incluye ejercicios prácticos y soporte técnico.",
+    "categoria": "Academico",
+    "vendedor": "usuario01",
+    "urlImagen": "curso-programacion.jpg",
+    "pedido": null
+  },
+  {
+    "objectID": "97613131567",
+    "nombre": "Novela de ciencia ficción",
+    "precio": 14.99,
+    "descripcion": "Novela de ciencia ficción que explora temas como la inteligencia artificial, la vida extraterrestre y los viajes en el tiempo. Escrita por un autor best-seller y con excelentes reseñas.",
+    "categoria": "Literatura",
+    "vendedor": "charlie",
+    "urlImagen": "novela-ciencia-ficcion.jpg",
+    "pedido": null
+  },
+  {
+    "objectID": "1231313287",
+    "nombre": "Jarrón de cerámica",
+    "precio": 49.99,
+    "descripcion": "Jarrón de cerámica hecho a mano con un diseño elegante y minimalista. Ideal para flores naturales o artificiales. Disponible en varios colores y tamaños.",
+    "categoria": "Decoracion",
+    "vendedor": "fernanrod",
+    "urlImagen": "jarron-ceramica.jpg",
+    "pedido": null
+  },
+  {
+    "objectID": "12323138676",
+    "nombre": "Auriculares WIFI",
+    "precio": 59.99,
+    "descripcion": "Auriculares inalámbricos con WIFI 5.0, micrófono integrado y cancelación de ruido. Diseño ergonómico y ligero. Disponible en varios colores.",
+    "categoria": "Tecnologia",
+    "vendedor": "fernanrod",
+    "urlImagen": "auriculares-wifi.jpg",
+    "pedido": null
+  },
+  {
+    "objectID": "4613987923",
+    "nombre": "Juego de toallas",
+    "precio": 29.99,
+    "descripcion": "Juego de toallas de algodón egipcio de alta calidad, suaves y absorbentes. Incluye toallas de baño, de mano y de tocador. Disponible en varios colores.",
+    "categoria": "Hogar",
+    "vendedor": "charlie",
+    "urlImagen": "juego-toallas.jpg",
+    "pedido": null
+  },
+  {
+    "objectID": "34208054230",
+    "nombre": "Agenda 2022",
+    "precio": 12.99,
+    "descripcion": "Agenda para el año 2022 con diseño moderno y funcional. Incluye calendario, planificador mensual y semanal, páginas de notas y stickers. Disponible en varios colores.",
+    "categoria": "Academico",
+    "vendedor": "usuario01",
+    "urlImagen": "agenda-2022.jpg",
+    "pedido": null
+  },
+  {
+    "objectID": "9807784532",
+    "nombre": "Libro de cocina",
+    "precio": 24.99,
+    "descripcion": "Libro de cocina con recetas saludables y fáciles de preparar, con fotografías a todo color. Escrito por un chef reconocido y con consejos útiles para la cocina diaria.",
+    "categoria": "Literatura",
+    "vendedor": "anaciel",
+    "urlImagen": "libro-cocina.jpg",
+    "pedido": null
+  },
+  {
+    "objectID": "56897231987",
+    "nombre": "Lámpara de mesa",
+    "precio": 39.99,
+    "descripcion": "Lámpara de mesa con base de madera y pantalla de tela. Diseño elegante y contemporáneo, con luz regulable. Disponible en varios colores.",
+    "categoria": "Decoracion",
+    "vendedor": "rantonio",
+    "urlImagen": "lampara-mesa.jpg",
+    "pedido": null
+  },
+  {
+    "objectID": "1725933938",
+    "nombre": "Aspiradora de mano Patito",
+    "precio": 39.99,
+    "descripcion": "Aspiradora de mano Patito con potente succión y filtros lavables. Incluye accesorios para limpiar en lugares de difícil acceso. Ideal para limpiar el coche o en casa. Disponible en varios colores.",
+    "categoria": "Hogar",
+    "vendedor": "usuario01",
+    "urlImagen": "aspiradora-de-mano-patito.jpg",
+    "pedido": null
+  },
+  {
+    "objectID": "829639174",
+    "nombre": "Calculadora científica",
+    "precio": 24.99,
+    "descripcion": "Calculadora científica con funciones avanzadas como trigonometría, estadísticas y programación. Pantalla LCD de alta resolución y diseño ergonómico. Ideal para estudiantes y profesionales.",
+    "categoria": "Academico",
+    "vendedor": "charlie",
+    "urlImagen": "calculadora-cientifica.jpg",
+    "pedido": null
+  },
+  {
+    "objectID": "395644313",
+    "nombre": "Set de vasos de whisky",
+    "precio": 29.99,
+    "descripcion": "Set de 4 vasos de whisky de cristal de alta calidad con diseño clásico y elegante. Ideal para disfrutar de una copa de whisky en buena compañía.",
+    "categoria": "Otros",
+    "vendedor": "fernandrod",
+    "urlImagen": "set-de-vasos-de-whisky.jpg",
+    "pedido": null
+  },
+  {
+    "objectID": "2817439789",
+    "nombre": "Funda de almohada",
+    "precio": 12.99,
+    "descripcion": "Funda de almohada de algodón orgánico con diseño moderno y elegante. Suave al tacto y fácil de lavar. Disponible en varios tamaños.",
+    "categoria": "Hogar",
+    "vendedor": "rantonio",
+    "urlImagen": "funda-de-almohada.jpg",
+    "pedido": null
+  },
+  {
+    "objectID": "2587891314",
+    "nombre": "Altavoz portátil",
+    "precio": 59.99,
+    "descripcion": "Altavoz portátil con Bluetooth 5.0 y sonido de alta calidad. Diseño resistente al agua y al polvo, con batería de larga duración. Ideal para llevar a cualquier lugar.",
+    "categoria": "Tecnologia",
+    "vendedor": "anaciel",
+    "urlImagen": "altavoz-portatil.jpg",
+    "pedido": null
+  },
+  {
+    "objectID": "784912623",
+    "nombre": "Smartwatch Hw12",
+    "precio": 800.99,
+    "descripcion": "Smartwatch compatible con Android y iOS, con funciones de monitor de frecuencia cardíaca, podómetro y notificaciones de mensajes y llamadas.",
+    "categoria": "Tecnologia",
+    "vendedor": "usuario01",
+    "urlImagen": "smartwatch_hw12.jpg",
+    "pedido": null
+  },
+  {
+    "objectID": "26289748916",
+    "nombre": "Libro El Código Da Vinci",
+    "precio": 200.5,
+    "descripcion": "Novela de intriga y misterio del autor Dan Brown, protagonizada por el profesor Robert Langdon. Edición de bolsillo.",
+    "categoria": "Literatura",
+    "vendedor": "anaciel",
+    "urlImagen": "el_codigo_da_vinci.jpg",
+    "pedido": null
+  },
+  {
+    "objectID": "159789326",
+    "nombre": "Silla de Oficina Ergonómica",
+    "precio": 1500,
+    "descripcion": "Silla de oficina con respaldo alto, ajuste de altura y reposabrazos acolchados. Diseñada para brindar una posición cómoda y saludable durante largas jornadas laborales.",
+    "categoria": "Hogar",
+    "vendedor": "rantonio",
+    "urlImagen": "silla_oficina_ergonomica.jpg",
+    "pedido": null
+  },
+  {
+    "objectID": "15126267423",
+    "nombre": "Cuadro Decorativo Abstracto",
+    "precio": 600,
+    "descripcion": "Cuadro decorativo con diseño abstracto en tonos azules y blancos. Ideal para darle un toque moderno y sofisticado a cualquier ambiente.",
+    "categoria": "Decoracion",
+    "vendedor": "charlie",
+    "urlImagen": "cuadro_decorativo_abstracto.jpg",
+    "pedido": null
+  },
+  {
+    "objectID": "4790324589",
+    "nombre": "Calculadora Científica Casio",
+    "precio": 350,
+    "descripcion": "Calculadora científica con pantalla de alta resolución, funciones trigonométricas y estadísticas, y memoria de 9 variables. Incluye estuche protector.",
+    "categoria": "Academico",
+    "vendedor": "fernanrod",
+    "urlImagen": "calculadora_casio.jpg",
+    "pedido": null
+  }
 ]

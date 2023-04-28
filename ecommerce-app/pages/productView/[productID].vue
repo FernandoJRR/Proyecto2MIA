@@ -60,12 +60,10 @@
   <Toast ref="vtoast" />
 </template>
 <script>
-import productos from "../../productosMockJSON.json";
 export default {
   data() {
     return {
       productoActual: null,
-      productosVentas: productos,
       productoCarrito: false,
     };
   },
@@ -80,7 +78,7 @@ export default {
         });
       } else {
         const session = useCookie("session");
-        session.value.carrito.push(this.productoActual.objectID);
+        session.value.carrito.push(this.productoActual._id);
 
         this.productoCarrito = true;
         this.$refs.vtoast.show({ message: "Producto agregado exitosamente!" });
@@ -89,7 +87,7 @@ export default {
     onEliminar() {
       const session = useCookie("session");
       session.value.carrito = session.value.carrito.filter(
-        (item) => item !== this.productoActual.objectID
+        (item) => item !== this.productoActual._id
       );
       this.productoCarrito = false;
       this.$refs.vtoast.show({ message: "Producto eliminado!" });
@@ -98,20 +96,20 @@ export default {
       const session = useCookie("session");
       if (session.value !== undefined) {
         const carrito = session.value.carrito;
-        return carrito.includes(this.productoActual.objectID);
+        return carrito.includes(this.productoActual._id);
       }
     },
-  },
-  mounted() {
-    for (let index = 0; index < productos.length; index++) {
-      const product = productos[index];
-      const route = useRoute();
-      const id = product.objectID;
-      if (id == route.params.productID) {
-        this.productoActual = product;
-        break;
+    async actualizarProductoActual() {
+      const route = useRoute()
+      const response = await $fetch("http://localhost:3100/api/productos/"+route.params.productID);
+      if (response.error) {
+      } else {
+        this.productoActual = response;
       }
     }
+  },
+  async mounted() {
+    await this.actualizarProductoActual()
     this.productoCarrito = this.productoEnCarrito();
   },
 };

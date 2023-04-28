@@ -7,7 +7,9 @@
       <v-btn append-icon="mdi-delete" @click="onLimpiar">Limpiar Carrito</v-btn>
       <br />
       <br />
-      <h4 style="text-align:center">Hay {{ productosCarrito.length }} producto/s en el carrito</h4>
+      <h4 style="text-align: center">
+        Hay {{ productosCarrito.length }} producto/s en el carrito
+      </h4>
       <br />
       <v-table>
         <thead>
@@ -28,7 +30,7 @@
             <td>{{ producto.nombre }}</td>
             <td>Q.{{ producto.precio }}</td>
             <td>
-              <v-btn :to="'/productView/' + producto.objectID" variant="plain">
+              <v-btn :to="'/productView/' + producto._id" variant="plain">
                 Ver Producto
               </v-btn>
             </td>
@@ -48,11 +50,11 @@
   </v-container>
 </template>
 <script>
-import productos from "../productosMockJSON.json";
 export default {
   data() {
     return {
       productosCarrito: [],
+      products: [],
     };
   },
   methods: {
@@ -69,12 +71,19 @@ export default {
       session.value.carrito = [];
       this.productosCarrito = [];
     },
+    async actualizarCarrito() {
+      const session = useCookie("session");
+      const response = await $fetch("http://localhost:3100/api/productos");
+      if (response.error) {
+      } else {
+        this.productosCarrito = response.filter((producto) => {
+          return session.value.carrito.includes(producto._id);
+        });
+      }
+    },
   },
-  mounted() {
-    const session = useCookie("session");
-    this.productosCarrito = productos.filter((producto) =>
-      session.value.carrito.includes(producto.objectID)
-    );
+  async mounted() {
+    await this.actualizarCarrito();
   },
 };
 </script>
