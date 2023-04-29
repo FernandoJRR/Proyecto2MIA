@@ -6,21 +6,6 @@ const fs = require("fs");
 
 const router = express.Router();
 
-router.get("/", async (_req, res) => {
-  const productos = await Producto.find();
-  res.json(productos);
-});
-
-router.get("/:producto", async (req, res) => {
-  const idProducto = req.params.producto;
-  const producto = await Producto.findOne({ _id: new ObjectId(idProducto) });
-  if (producto == null) {
-    res.json({ error: "Producto no existe" });
-    return;
-  }
-  res.json(producto);
-});
-
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "./tmp/");
@@ -34,6 +19,68 @@ const storage = multer.diskStorage({
     filename = "tempImage." + extension;
     cb(null, filename);
   },
+});
+
+router.get("/", async (_req, res) => {
+  const productos = await Producto.find();
+  res.json(productos);
+});
+
+router.post(
+  "/",
+  multer({ storage: storage }).single("imagen"),
+  async (req, res) => {
+    const image = req.file;
+
+    console.log(req.body);
+    //Se procesa la imagen
+    const extension =
+      image.mimetype.split("/")[1] === "jpeg"
+        ? "jpg"
+        : image.mimetype.split("/")[1];
+
+    const insert = new Producto({
+      nombre: req.body.nombre,
+      precio: req.body.precio,
+      descripcion: req.body.descripcion,
+      categoria: req.body.categoria,
+      vendedor: req.body.vendedor,
+      urlImagen: null,
+      pedido: null,
+      aceptado: false,
+    });
+
+    try {
+      const result = await insert.save();
+      const nombreImagen = result._id + "." + extension;
+
+      fs.rename(
+        "./tmp/" + image.filename,
+        "./images/" + nombreImagen,
+        function (err) {
+          if (err) console.log("ERROR: " + err);
+        }
+      );
+
+      await Producto.updateOne(
+        { _id: result._id },
+        { $set: { urlImagen: nombreImagen } }
+      );
+      res.json({ ok: "Solicitud Enviada" });
+    } catch (error) {
+      res.json({ error: err });
+    }
+  }
+);
+
+router.get("/:producto", async (req, res) => {
+  const idProducto = req.params.producto;
+  const producto = await Producto.findOne({ _id: new ObjectId(idProducto) });
+  if (producto == null) {
+    res.json({ error: "Producto no existe" });
+    return;
+  }
+  res.json(producto);
 });
 
 router.patch(
@@ -85,13 +132,8 @@ router.patch(
             );
           });
 
-          if (update.modifiedCount === 0) {
-            res.json({ ok: "No se ha modificado el producto" });
-            return;
-          } else {
-            res.json({ ok: "Producto modificado exitosamente" });
-            return;
-          }
+          res.json({ ok: "Producto modificado exitosamente" });
+          return;
         } catch (error) {
           res.json({ error: error });
           return;

@@ -21,6 +21,7 @@
                   type="number"
                   v-model="precio"
                   prefix="Q"
+                  :rules="precioRules"
                 ></v-text-field>
                 <v-textarea
                   label="Descripcion"
@@ -85,7 +86,6 @@ export default {
     precio: null,
     precioRules: [
       (value) => !!value || "Precio requerido!",
-      (value) => value < 0 || "No es un precio valido!",
     ],
     descripcion: "",
     descripcionRules: [(value) => !!value || "Descripcion requerida!"],

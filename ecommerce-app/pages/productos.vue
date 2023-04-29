@@ -15,6 +15,7 @@
           <th class="text-left">Nombre</th>
           <th class="text-left">Precio</th>
           <th class="text-left">Descripcion</th>
+          <th class="text-left">Estado</th>
           <th class="text-left">Acciones</th>
         </tr>
       </thead>
@@ -29,6 +30,9 @@
           <td>{{ producto.nombre }}</td>
           <td>Q.{{ producto.precio }}</td>
           <td>{{ producto.descripcion }}</td>
+          <td v-if="producto.aceptado && producto.pedido === null">En Venta</td>
+          <td v-else-if="producto.pedido !== null">Vendido</td>
+          <td v-else-if="!producto.aceptado">Solicitado</td>
           <td>
             <v-btn
               variant="plain"
@@ -75,8 +79,10 @@ export default {
         this.$refs.vtoast.show({ message: respuesta.error });
       }
     },
-    onSubmitAgregar(){
-
+    async onSubmitAgregar(){
+      const respuesta = this.$refs.agregarDialog.responseClose
+      await this.actualizarProductos()
+      this.$refs.vtoast.show({ message: "Producto Agregado" });
     },
     async actualizarProductos() {
       const session = useCookie("session");

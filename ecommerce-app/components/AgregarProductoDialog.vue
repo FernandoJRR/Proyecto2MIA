@@ -20,6 +20,7 @@
                   type="number"
                   v-model="precio"
                   prefix="Q"
+                  :rules="precioRules"
                 ></v-text-field>
                 <v-textarea
                   label="Descripcion"
@@ -47,6 +48,7 @@
                   label="Imagen"
                   variant="outlined"
                   v-model="imagen"
+                  :rules="imagenRules"
                 >
                 </v-file-input>
             </v-col>
@@ -76,7 +78,6 @@ export default {
     precio: null,
     precioRules: [
       (value) => !!value || "Precio requerido!",
-      (value) => value < 0 || "No es un precio valido!",
     ],
     descripcion: "",
     descripcionRules: [(value) => !!value || "Descripcion requerida!"],
@@ -93,14 +94,14 @@ export default {
     async submit(event) {
       const results = await event;
       if (results.errors.length === 0) {
+        console.log(this.imagen[0])
         let form = new FormData();
         form.append("nombre", this.nombre);
         form.append("precio", this.precio);
         form.append("descripcion", this.descripcion);
         form.append("categoria", this.categoria);
-        if (this.imagen !== null) {
-          form.append("imagen", this.imagen[0]);
-        }
+        form.append("imagen", this.imagen[0]);
+        form.append("vendedor", useCookie('session').value.username);
 
         const response = await $fetch("http://localhost:3100/api/productos/", {
           headers: {},
