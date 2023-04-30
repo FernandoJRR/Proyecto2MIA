@@ -5,6 +5,7 @@
         eCommerceGT
       </nuxt-link>
       <v-btn to="/productos" v-if="tipo === 'Usuario'"> Productos </v-btn>
+      <v-btn to="/solicitudes" v-if="tipo === 'Paqueteria'"> Solicitudes </v-btn>
     </v-app-bar-title>
     <v-btn @click="toLogin" v-if="login"> Login </v-btn>
     <div v-else>

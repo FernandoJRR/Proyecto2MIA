@@ -83,6 +83,23 @@ router.get("/:producto", async (req, res) => {
   res.json(producto);
 });
 
+router.put("/:producto", async (req, res) => {
+  const idProducto = req.params.producto;
+  const fieldACambiar = req.body.field;
+  const nuevoValor = req.body.value;
+
+  try {
+    await Producto.updateOne(
+      { _id: idProducto },
+      { $set: { [fieldACambiar]: nuevoValor } }
+    );
+
+    res.json({ ok: "Producto modificado" });
+  } catch (error) {
+    res.json({ error: err });
+  }
+});
+
 router.patch(
   "/:producto",
   multer({ storage: storage }).single("imagen"),

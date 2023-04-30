@@ -20,7 +20,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
       return navigateTo('/');
     }
   }
-  if (to.path === "/paquetes") {
+  if (to.path === "/paquetes" || to.path === '/solicitudes') {
     if (session.value !== undefined) {
       if ((session.value as any).tipo === "Paqueteria") {
       } else {

@@ -20,6 +20,7 @@
                   type="number"
                   v-model="precio"
                   prefix="Q"
+                  min="0"
                   :rules="precioRules"
                 ></v-text-field>
                 <v-textarea

@@ -3,7 +3,9 @@
     <h1 style="text-align: center">Productos en Venta</h1>
     <v-divider />
     <br />
-    <v-btn append-icon="mdi-plus" @click="onAgregar">Poner Producto en Venta</v-btn>
+    <v-btn append-icon="mdi-plus" @click="onAgregar"
+      >Poner Producto en Venta</v-btn
+    >
     <AgregarProductoDialog ref="agregarDialog" @close="onSubmitAgregar" />
     <ModificarProductoDialog ref="modificarDialog" @close="onSubmitModificar" />
     <br />
@@ -34,9 +36,7 @@
           <td v-else-if="producto.pedido !== null">Vendido</td>
           <td v-else-if="!producto.aceptado">Solicitado</td>
           <td>
-            <v-btn
-              variant="plain"
-              @click="onModificar(producto)"
+            <v-btn variant="plain" @click="onModificar(producto)"
               >Modificar</v-btn
             >
           </td>
@@ -55,20 +55,27 @@ export default {
   },
   methods: {
     onModificar(productoModificar) {
+      if (productoModificar.pedido !== null) {
+        this.$refs.vtoast.show({
+          message: "No puedes modificar un producto que ya ha sido vendido",
+          color: "warning",
+        });
+        return;
+      }
       this.$refs.modificarDialog.productoDialog = productoModificar;
       this.$refs.modificarDialog.categoria = productoModificar.categoria;
       this.$refs.modificarDialog.nombre = productoModificar.nombre;
       this.$refs.modificarDialog.precio = productoModificar.precio;
       this.$refs.modificarDialog.descripcion = productoModificar.descripcion;
       this.$refs.modificarDialog.urlImagen = productoModificar.urlImagen;
-      this.$refs.modificarDialog.dialog = true
+      this.$refs.modificarDialog.dialog = true;
     },
-    onAgregar(){
-      this.$refs.agregarDialog.dialog = true
+    onAgregar() {
+      this.$refs.agregarDialog.dialog = true;
     },
-    async onSubmitModificar(){
-      const respuesta = this.$refs.modificarDialog.responseClose
-      await this.actualizarProductos()
+    async onSubmitModificar() {
+      const respuesta = this.$refs.modificarDialog.responseClose;
+      await this.actualizarProductos();
       if (respuesta.ok) {
         if (respuesta.ok === "Producto modificado exitosamente") {
           this.$refs.vtoast.show({ message: respuesta.ok });
@@ -79,9 +86,9 @@ export default {
         this.$refs.vtoast.show({ message: respuesta.error });
       }
     },
-    async onSubmitAgregar(){
-      const respuesta = this.$refs.agregarDialog.responseClose
-      await this.actualizarProductos()
+    async onSubmitAgregar() {
+      const respuesta = this.$refs.agregarDialog.responseClose;
+      await this.actualizarProductos();
       this.$refs.vtoast.show({ message: "Producto Agregado" });
     },
     async actualizarProductos() {

@@ -40,7 +40,9 @@ export default {
       const response = await $fetch("http://localhost:3100/api/productos");
       if (response.error) {
       } else {
-        this.productosVentas = response;
+        this.productosVentas = response.filter((producto) => {
+          return producto.pedido === null && producto.aceptado
+        }).reverse();
       }
     },
   },

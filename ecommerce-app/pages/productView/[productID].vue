@@ -21,28 +21,39 @@
             useCookie('session').value.tipo === 'Usuario'
           "
         >
-          <v-btn
-            v-show="!productoCarrito"
-            color="primary"
-            append-icon="mdi-cart"
-            @click="onAgregar"
-            block
-          >
-            Agregar al Carrito
-          </v-btn>
-          <v-btn
-            v-show="productoCarrito"
-            color="secondary"
-            append-icon="mdi-close"
-            @click="onEliminar"
-            block
-          >
-            Eliminar del Carrito
-          </v-btn>
+          <div v-if="!productoDeUsuario">
+            <v-btn
+              v-show="!productoCarrito"
+              color="primary"
+              append-icon="mdi-cart"
+              @click="onAgregar"
+              block
+            >
+              Agregar al Carrito
+            </v-btn>
+            <v-btn
+              v-show="productoCarrito"
+              color="secondary"
+              append-icon="mdi-close"
+              @click="onEliminar"
+              block
+            >
+              Eliminar del Carrito
+            </v-btn>
+          </div>
+          <div v-else>
+            <v-btn
+              color="warning"
+              append-icon="mdi-cog-outline"
+              to="/productos"
+              block
+            >
+              Modificar Producto
+            </v-btn>
+          </div>
         </div>
         <div v-else>
           <v-btn
-            v-show="!productoCarrito"
             color="primary"
             append-icon="mdi-cart"
             @click="onAgregar"
@@ -65,6 +76,7 @@ export default {
     return {
       productoActual: null,
       productoCarrito: false,
+      productoDeUsuario: false,
     };
   },
   methods: {
@@ -100,16 +112,20 @@ export default {
       }
     },
     async actualizarProductoActual() {
-      const route = useRoute()
-      const response = await $fetch("http://localhost:3100/api/productos/"+route.params.productID);
+      const route = useRoute();
+      const response = await $fetch(
+        "http://localhost:3100/api/productos/" + route.params.productID
+      );
       if (response.error) {
       } else {
         this.productoActual = response;
       }
-    }
+    },
   },
   async mounted() {
-    await this.actualizarProductoActual()
+    await this.actualizarProductoActual();
+    const usuario = useCookie("session").value.username;
+    this.productoDeUsuario = this.productoActual.vendedor === usuario;
     this.productoCarrito = this.productoEnCarrito();
   },
 };
