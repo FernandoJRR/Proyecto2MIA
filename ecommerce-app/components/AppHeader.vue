@@ -5,10 +5,18 @@
         eCommerceGT
       </nuxt-link>
       <v-btn to="/productos" v-if="tipo === 'Usuario'"> Productos </v-btn>
+      <v-btn to="/reportes" v-if="tipo === 'Administrador'"> Reportes </v-btn>
       <v-btn to="/solicitudes" v-if="tipo === 'Paqueteria'"> Solicitudes </v-btn>
     </v-app-bar-title>
     <v-btn @click="toLogin" v-if="login"> Login </v-btn>
     <div v-else>
+      <v-btn
+        prepend-icon="mdi-package"
+        v-if="tipo === 'Usuario'"
+        to="/pedidos"
+      >
+        Pedidos
+      </v-btn>
       <v-btn
         prepend-icon="mdi-cart-outline"
         v-if="tipo === 'Usuario'"
@@ -24,7 +32,7 @@
         Usuarios
       </v-btn>
       <v-btn
-        prepend-icon="mdi-cart-outline"
+        prepend-icon="mdi-package"
         v-else-if="tipo === 'Paqueteria'"
         to="/paquetes"
       >
